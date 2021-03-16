@@ -60,7 +60,7 @@ $(document).ready(function() {
       $(this).find('td').each(function(){
         var  t = $(this).text().replace(/\s+|\t/g,"")
       if( t.includes('http')){
-          $(this).html("<a href='"+t+"' class='btn btn-primary' target='_blank'>Search Now</a>")
+          $(this).html("<a href='"+t+"' class='btn btn-primary' target='_blank'>Open</a>")
         }else if(t.includes('http://tinkerfest.in/') ){
           $(this).html("<a href='"+t+"' class='btn btn-success' target='_blank'>Learn More</a>")
         }
