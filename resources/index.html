@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+  <title>Tinkering Resources</title>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        Tinkering Resources
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  
+<table  id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <thead> 
+<tr>
+<td>Category</td>
+<td>Name</td>
+<td>Website Link</td>
+<td>Type</td>
+</tr>
+  </thead>
+<tbody>
+<tr>
+<td>STEM Activities</td>
+<td>stemLAB</td>
+<td>https://zero2maker.org/zerolab/</td>
+<td>Blog & Videos</td>
+</tr>
+<tr>
+<td>Coding</td>
+<td>Learn Python By Example</td>
+<td>https://www.learnbyexample.org/python/</td>
+<td>Blog Tutorial</td>
+</tr>
+<tr>
+<td>Mechanical</td>
+<td>3D Animated Mechanisms</td>
+<td>https://www.youtube.com/channel/UCli_RJkGWfZvw4IlDLHNCQg</td>
+<td>Videos</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('tr').each(function(){
+      $(this).find('td').each(function(){
+        var  t = $(this).text().replace(/\s+|\t/g,"")
+      if( t.includes('http')){
+          $(this).html("<a href='"+t+"' class='btn btn-primary' target='_blank'>Search Now</a>")
+        }else if(t.includes('http://tinkerfest.in/') ){
+          $(this).html("<a href='"+t+"' class='btn btn-success' target='_blank'>Learn More</a>")
+        }
+      })
+    })
+    $('#example').DataTable();
+});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113131856-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113131856-1');
+</script>
+
+<br>
+
+<center>By Team Tinkering India</center>  
+</body>
+</html>
